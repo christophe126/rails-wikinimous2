@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-light navbar-expand-md border-bottom">
+
+    <div class="container">
+        <div class="navbar-brand">
+          <%= link_to "Wikinimous", articles_path, class: "text-decoration-none gray fw-normal fs-6"  %>
+        </div>
+        <!-- Le bouton s'affichera en petit écran -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#monMenuDeroulant">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-grow-0" id="monMenuDeroulant">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <%= link_to "New Article", new_article_path, class: "text-decoration-none gray fw-normal fs-6"  %>
+                </li>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,16 @@
+<div class="mt-3 p-5 ">
+  <%= simple_form_for(@article) do |f| %>
+    <div class="mb-3 d-block">
+      <%= f.label :title, class: "form-label fw-bold" %>
+      <%= f.text_field :title, class: "form-control"%>
+    </div>
+    <div class="mb-3">
+      <%= f.label :content, class: "form-label fw-bold" %>
+      <%= f.text_area :content, as: :text, class: "form-control", rows: 10 %>
+    </div>
+    <div class="mt-3 text-center">
+      <%= link_to "Cancel", root_path, class: "btn btn-outline-secondary w-25"  %>
+      <%= f.submit class: "btn btn-primary w-25" %>
+    </div>
+  <% end %>
+</div>
