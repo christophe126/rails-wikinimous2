@@ -2,15 +2,13 @@
   <div class="container mt-5 p-1">
     <div class="w-75 mx-auto ">
         <p class="fs-4 bleue "><%= @article.title %>
-        <span class="pl-1"><a href=""></a>
-        <%= image_tag "pencil.png", alt: "Edit Article", width: 20, height: 20 %></span>
-        <span class="">
-        <%= link_to (image_tag "trash.png", alt: "Edit Article", width: 20, height: 20 ), candidate_path(booking.candidate)%>
-        </span></p>
+          <span class="pl-1"><a href=""></a>
+            <%= link_to (image_tag "pencil.png", alt: "Edit Article", width: 20, height: 20 ), edit_article_path(@article)%>
+          </span>
+          <span class="">
+            <%= link_to (image_tag "trash.png", alt: "Delete Article", width: 20, height: 20 ), article_path(@article), method: :delete, data: { confirm: 'Are you sure?', class: "bg-warning" } %>
+          </span></p>
         <p class="fw-light lh-sm txt-justify"><%= @article.content %></p>
     </div>
   </div>
 </article>
-
-<%# <%= link_to edit_article_path(@article) do %>
-<%# <i class="fa fa-pencil"></i><% end %>
